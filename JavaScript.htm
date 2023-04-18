@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Darleen</title>
+        <meta charset="utf8"/>
+        <script>
+            var angle = 0;
+            function turnright()
+                {
+                    var tabim = document.getElementsByTagName('img');
+                    angle++;
+                    for ( var i = 0; i <= tabim.length; i++)
+                {
+                    tabim[i].style.transform = "rotate(" + angle + "deg)";
+                }
+                    
+                }
+                function turnleft()
+                {
+                    var tabim = document.getElementsByTagName('img')
+                    angle--;
+                    for (var i = 0; i <= 2; i++)
+                    {
+                        tabim[i].style.transform = "rotate(" + angle + "deg)";
+                    }
+                }
+
+        
+            
+        </script>
+        
+    </head>
+
+    <body>
+        <img src="vue.jpg" width="200"/>
+        <img src="vue.jpg" width="200" class="raf" onclick="moveraf()"/>
+        <img src="vue.jpg" width="200"/>
+
+        <h1>Que le photographe qui a pris cette photo est doué !!! </h1>
+        <button onclick="turnright()">tourne à droite</button>
+        <button onclick="turnleft()">tourne à gauche</button>
+    </body>
+</html>
